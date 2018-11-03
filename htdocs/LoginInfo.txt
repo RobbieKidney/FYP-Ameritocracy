@@ -1,0 +1,3 @@
+Database Password
+user account: root@localhost
+password: SklBpePBjViLGWj6
