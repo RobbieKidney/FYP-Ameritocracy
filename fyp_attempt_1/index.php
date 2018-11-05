@@ -33,14 +33,14 @@ CloseCon($conn);
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="navbar-brand" href="index.php">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home
+              <a class="nav-link" href="admin.html">Admin
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -69,22 +69,55 @@ CloseCon($conn);
           <!-- Slide One - Set the background image for this slide in the line below -->
           <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
             <div class="carousel-caption d-none d-md-block">
-              <h3>First Slide</h3>
-              <p>This is a description for the first slide.</p>
+              <img class="rounded-circle img-fluid d-block mx-auto" src="img/person.jpg" alt="">
+          <h3><?php 
+					$query = "SELECT id, name, age, role, team, division FROM employee WHERE id = ? LIMIT 0,1";
+					$stmt = $conn->prepare( $query );
+					$id=1;
+					$stmt->bindParam(1, $id);
+					$stmt->execute();
+					$row = $stmt->fetch(PDO::FETCH_ASSOC);
+					echo "<div>Name: " . $row['name'] . "</div>";	
+			  ?>
+            <small><?php echo "<div>Role: " . $row['role'] . "</div>"; ?></small>
+          </h3>
+          <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
             </div>
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
           <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Second Slide</h3>
-              <p>This is a description for the second slide.</p>
+              <img class="rounded-circle img-fluid d-block mx-auto" src="img/person.jpg" alt="">
+          <h3><?php 
+					$query = "SELECT id, name, age, role, team, division FROM employee WHERE id = ? LIMIT 0,1";
+					$stmt = $conn->prepare( $query );
+					$id=2;
+					$stmt->bindParam(1, $id);
+					$stmt->execute();
+					$row = $stmt->fetch(PDO::FETCH_ASSOC);
+					echo "<div>Name: " . $row['name'] . "</div>";	
+			  ?>
+            <small><?php echo "<div>Role: " . $row['role'] . "</div>"; ?></small>
+          </h3>
+          <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
             </div>
           </div>
           <!-- Slide Three - Set the background image for this slide in the line below -->
           <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Third Slide</h3>
-              <p>This is a description for the third slide.</p>
+              <img class="rounded-circle img-fluid d-block mx-auto" src="img/person.jpg" alt="">
+          <h3><?php 
+					$query = "SELECT id, name, age, role, team, division FROM employee WHERE id = ? LIMIT 0,1";
+					$stmt = $conn->prepare( $query );
+					$id=3;
+					$stmt->bindParam(1, $id);
+					$stmt->execute();
+					$row = $stmt->fetch(PDO::FETCH_ASSOC);
+					echo "<div>Name: " . $row['name'] . "</div>";	
+			  ?>
+            <small><?php echo "<div>Role: " . $row['role'] . "</div>"; ?></small>
+          </h3>
+          <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
             </div>
           </div>
         </div>
