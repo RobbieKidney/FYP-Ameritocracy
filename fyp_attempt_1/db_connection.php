@@ -2,10 +2,10 @@
  
 	function OpenCon()
 	{
-		$host = "localhost";
-		$db_name = "fypDatabase";
-		$username = "root";
-		$password = "SklBpePBjViLGWj6";
+		$host = "172.17.0.195";
+		$db_name = "db1516348_ameritocracyDB";
+		$username = "u1516348_DBuser";
+		$password = "48zIEgbO";
 	 
 			try 
 			{
